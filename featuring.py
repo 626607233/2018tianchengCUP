@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 #%%
 import os
 os.chdir(r'D:\Learningfile\DC竞赛\2018甜橙杯数据建模大赛\开放数据_甜橙杯数据建模_中国电信（补充）')
