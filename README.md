@@ -48,4 +48,4 @@ TPR3：FPR=0.01时的TPR
 
 根据shapley Value得到特征重要性：
 
-![shapley Value:](https://github.com/626607233/2018tianchengCUP/blob/master/lgbm_shapley_values_10_5.jpg)
+![shapley Value:](https://github.com/626607233/2018tianchengCUP/blob/master/lgbm_shapley_values_10_5.png)
