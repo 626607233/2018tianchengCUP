@@ -22,14 +22,10 @@
 2.	transaction_round1_new.csv为初赛测试集交易详情表单，共168981条数据；
 注意：初赛测试集的日期数据（day）也是从1开始，但这里的日期1和训练集中的日期1不是同一天，而是指初赛测试集中的第一天的数据。（同理，请区分复赛测试集中的日期与其他数据集中的日期）
 
+详细字段如下：
 ![详细字段如下：](https://github.com/626607233/2018tianchengCUP/blob/master/交易详单数据字典.png)
 
 评分标准
-
-
-评分算法
-
-other
 
 在黑产监控中，需要尽可能做到尽可能少的误伤和尽可能准确地探测，于是我们选择“在FPR较低时的TPR加权平均值”作为平均指标。
 给定一个阀值，可根据混淆矩阵计算TPR（覆盖率）和FPR（打扰率）
@@ -50,4 +46,5 @@ TPR3：FPR=0.01时的TPR
 
 最终成绩= 0.4 * TPR1 + 0.3 * TPR2 + 0.3 * TPR3
 
-![根据shapley Value得到特征重要性：](https://github.com/626607233/2018tianchengCUP/blob/master/lgbm_shapley values_10_5.jpg)
+根据shapley Value得到特征重要性：
+![根据shapley Value得到特征重要性:](https://github.com/626607233/2018tianchengCUP/blob/master/lgbm_shapley values_10_5.jpg)
