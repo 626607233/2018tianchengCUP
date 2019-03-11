@@ -50,3 +50,4 @@ TPR3：FPR=0.01时的TPR
 
 最终成绩= 0.4 * TPR1 + 0.3 * TPR2 + 0.3 * TPR3
 
+![根据shapley Value得到特征重要性：](https://github.com/626607233/2018tianchengCUP/blob/master/lgbm_shapley values_10_5.jpg)
