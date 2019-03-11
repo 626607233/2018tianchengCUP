@@ -22,8 +22,7 @@
 2.	transaction_round1_new.csv为初赛测试集交易详情表单，共168981条数据；
 注意：初赛测试集的日期数据（day）也是从1开始，但这里的日期1和训练集中的日期1不是同一天，而是指初赛测试集中的第一天的数据。（同理，请区分复赛测试集中的日期与其他数据集中的日期）
 
-详细字段如下：
-https://github.com/626607233/2018tianchengCUP/blob/master/交易详单数据字典.png
+![详细字段如下：]https://github.com/626607233/2018tianchengCUP/blob/master/交易详单数据字典.png
 
 评分标准
 
@@ -48,22 +47,4 @@ TPR1：FPR=0.001时的TPR
 TPR2：FPR=0.005时的TPR
 TPR3：FPR=0.01时的TPR
 最终成绩= 0.4 * TPR1 + 0.3 * TPR2 + 0.3 * TPR3
-
-
-def tpr_weight_funtion(y_true,y_predict):
-    d = pd.DataFrame()
-    d['prob'] = list(y_predict)
-    d['y'] = list(y_true)
-    d = d.sort_values(['prob'], ascending=[0])
-    y = d.y
-    PosAll = pd.Series(y).value_counts()[1]
-    NegAll = pd.Series(y).value_counts()[0]
-    pCumsum = d['y'].cumsum()
-    nCumsum = np.arange(len(y)) - pCumsum + 1
-    pCumsumPer = pCumsum / PosAll
-    nCumsumPer = nCumsum / NegAll
-    TR1 = pCumsumPer[abs(nCumsumPer-0.001).idxmin()]
-    TR2 = pCumsumPer[abs(nCumsumPer-0.005).idxmin()]
-    TR3 = pCumsumPer[abs(nCumsumPer-0.01).idxmin()]
-    return 0.4 * TR1 + 0.3 * TR2 + 0.3 * TR3
 
